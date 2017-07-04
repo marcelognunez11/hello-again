@@ -1,3 +1,0 @@
-# Hashes of file build rules.
-3db69ca945478369e5ff18f6d7f2a070 com.github.marcelognunez11.hello-again_valac.stamp
-ce459912c2d08eb045fc739e80ffdf47 src/hello-again.c
