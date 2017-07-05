@@ -1,0 +1,7 @@
+/home/boom/Documents/vala/hello-world/hello-again/build/CMakeFiles/install.dir
+/home/boom/Documents/vala/hello-world/hello-again/build/CMakeFiles/list_install_components.dir
+/home/boom/Documents/vala/hello-world/hello-again/build/CMakeFiles/rebuild_cache.dir
+/home/boom/Documents/vala/hello-world/hello-again/build/CMakeFiles/com.github.marcelognunez11.hello-again.dir
+/home/boom/Documents/vala/hello-world/hello-again/build/CMakeFiles/edit_cache.dir
+/home/boom/Documents/vala/hello-world/hello-again/build/CMakeFiles/install/strip.dir
+/home/boom/Documents/vala/hello-world/hello-again/build/CMakeFiles/install/local.dir

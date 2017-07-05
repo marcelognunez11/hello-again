@@ -1,0 +1,3 @@
+/usr/bin/com.github.marcelognunez11.hello-again
+/usr/share/applications/com.github.marcelognunez11.hello-again.desktop
+/usr/share/metainfo/com.github.marcelognunez11.hello-again.appdata.xml

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/boom/Documents/vala/hello-world/hello-again/build/src/hello-again.c
+glib.h
+-
+glib-object.h
+-
+stdlib.h
+-
+string.h
+-
+gtk/gtk.h
+-
+
