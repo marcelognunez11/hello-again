@@ -20,22 +20,39 @@
 * Authored by: Marcelo G. Nuñez <marcelognunez@gmail.com>
 */
 
+using Gtk;
 
 int main (string[] args) {
     Gtk.init (ref args);
-    var window = new Gtk.Window ();
-    window.title = "Hello World!";
-    window.set_border_width (12);
-    window.set_position (Gtk.WindowPosition.CENTER);
-    window.set_default_size (350, 70);
-    window.destroy.connect (Gtk.main_quit);
+    var window = new Gtk.Window();
+    window.title = _("Hello World!");
+    window.set_border_width(12);
+    window.set_position(Gtk.WindowPosition.CENTER);
+    window.set_default_size(350, 70);
+    window.destroy.connect(Gtk.main_quit);
     
-    var label = new Gtk.Label ("Hello Again World!");
+    try {
+        // Either directly from a file ...
+        //window.icon = new Gdk.Pixbuf.from_file ("my-app.png");
+        // ... or from the theme
+        window.icon = IconTheme.get_default().load_icon("folder-ufo", 48, 0);
+    } catch (Error e) {
+        stderr.printf (_("Could not load application icon: %s\n"), e.message);
+    }
+    
+    var label = new Gtk.Label(_("Hello Again World!"));
 
-    window.add (label);
-    window.show_all ();
+    window.add(label);
+    window.show_all();
 
     Gtk.main ();
     return 0;
 }
+
+
+
+
+
+
+
 

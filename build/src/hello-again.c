@@ -28,8 +28,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <gtk/gtk.h>
+#include <gdk-pixbuf/gdk-pixbuf.h>
+#include <stdio.h>
 
 #define _g_object_unref0(var) ((var == NULL) ? NULL : (var = (g_object_unref (var), NULL)))
+#define _g_error_free0(var) ((var == NULL) ? NULL : (var = (g_error_free (var), NULL)))
 
 
 
@@ -38,9 +41,9 @@ static void _gtk_main_quit_gtk_widget_destroy (GtkWidget* _sender, gpointer self
 
 
 static void _gtk_main_quit_gtk_widget_destroy (GtkWidget* _sender, gpointer self) {
-#line 31 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+#line 32 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
 	gtk_main_quit ();
-#line 44 "hello-again.c"
+#line 47 "hello-again.c"
 }
 
 
@@ -49,46 +52,107 @@ gint _vala_main (gchar** args, int args_length1) {
 	GtkWindow* window = NULL;
 	GtkWindow* _tmp0_ = NULL;
 	GtkLabel* label = NULL;
-	GtkLabel* _tmp1_ = NULL;
-#line 25 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+	GtkLabel* _tmp8_ = NULL;
+	GError * _inner_error_ = NULL;
+#line 26 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
 	gtk_init (&args_length1, &args);
-#line 26 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
-	_tmp0_ = (GtkWindow*) gtk_window_new (GTK_WINDOW_TOPLEVEL);
-#line 26 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
-	g_object_ref_sink (_tmp0_);
-#line 26 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
-	window = _tmp0_;
 #line 27 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
-	gtk_window_set_title (window, "Hello World!");
+	_tmp0_ = (GtkWindow*) gtk_window_new (GTK_WINDOW_TOPLEVEL);
+#line 27 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+	g_object_ref_sink (_tmp0_);
+#line 27 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+	window = _tmp0_;
 #line 28 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
-	gtk_container_set_border_width ((GtkContainer*) window, (guint) 12);
+	gtk_window_set_title (window, "Hello World!");
 #line 29 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
-	gtk_window_set_position (window, GTK_WIN_POS_CENTER);
+	gtk_container_set_border_width ((GtkContainer*) window, (guint) 12);
 #line 30 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
-	gtk_window_set_default_size (window, 350, 70);
+	gtk_window_set_position (window, GTK_WIN_POS_CENTER);
 #line 31 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+	gtk_window_set_default_size (window, 350, 70);
+#line 32 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
 	g_signal_connect ((GtkWidget*) window, "destroy", (GCallback) _gtk_main_quit_gtk_widget_destroy, NULL);
-#line 33 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
-	_tmp1_ = (GtkLabel*) gtk_label_new ("Hello Again World!");
-#line 33 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
-	g_object_ref_sink (_tmp1_);
-#line 33 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
-	label = _tmp1_;
-#line 35 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
-	gtk_container_add ((GtkContainer*) window, (GtkWidget*) label);
-#line 36 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
-	gtk_widget_show_all ((GtkWidget*) window);
+#line 76 "hello-again.c"
+	{
+		GdkPixbuf* _tmp1_ = NULL;
+		GtkIconTheme* _tmp2_ = NULL;
+		GdkPixbuf* _tmp3_ = NULL;
 #line 38 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		_tmp2_ = gtk_icon_theme_get_default ();
+#line 38 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		_tmp3_ = gtk_icon_theme_load_icon (_tmp2_, "folder-ufo", 48, 0, &_inner_error_);
+#line 38 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		_tmp1_ = _tmp3_;
+#line 38 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		if (G_UNLIKELY (_inner_error_ != NULL)) {
+#line 89 "hello-again.c"
+			goto __catch0_g_error;
+		}
+#line 38 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		gtk_window_set_icon (window, _tmp1_);
+#line 34 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		_g_object_unref0 (_tmp1_);
+#line 96 "hello-again.c"
+	}
+	goto __finally0;
+	__catch0_g_error:
+	{
+		GError* e = NULL;
+		FILE* _tmp4_ = NULL;
+		GError* _tmp5_ = NULL;
+		const gchar* _tmp6_ = NULL;
+#line 34 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		e = _inner_error_;
+#line 34 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		_inner_error_ = NULL;
+#line 40 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		_tmp4_ = stderr;
+#line 40 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		_tmp5_ = e;
+#line 40 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		_tmp6_ = _tmp5_->message;
+#line 40 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		fprintf (_tmp4_, "Could not load application icon: %s\n", _tmp6_);
+#line 34 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		_g_error_free0 (e);
+#line 119 "hello-again.c"
+	}
+	__finally0:
+#line 34 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+	if (G_UNLIKELY (_inner_error_ != NULL)) {
+#line 124 "hello-again.c"
+		gint _tmp7_ = 0;
+#line 34 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		_g_object_unref0 (window);
+#line 34 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		g_critical ("file %s: line %d: uncaught error: %s (%s, %d)", __FILE__, __LINE__, _inner_error_->message, g_quark_to_string (_inner_error_->domain), _inner_error_->code);
+#line 34 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		g_clear_error (&_inner_error_);
+#line 34 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+		return _tmp7_;
+#line 134 "hello-again.c"
+	}
+#line 43 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+	_tmp8_ = (GtkLabel*) gtk_label_new ("Hello Again World!");
+#line 43 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+	g_object_ref_sink (_tmp8_);
+#line 43 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+	label = _tmp8_;
+#line 45 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+	gtk_container_add ((GtkContainer*) window, (GtkWidget*) label);
+#line 46 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+	gtk_widget_show_all ((GtkWidget*) window);
+#line 48 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
 	gtk_main ();
-#line 39 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+#line 49 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
 	result = 0;
-#line 39 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+#line 49 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
 	_g_object_unref0 (label);
-#line 39 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+#line 49 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
 	_g_object_unref0 (window);
-#line 39 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+#line 49 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
 	return result;
-#line 92 "hello-again.c"
+#line 156 "hello-again.c"
 }
 
 
@@ -96,9 +160,9 @@ int main (int argc, char ** argv) {
 #if !GLIB_CHECK_VERSION (2,35,0)
 	g_type_init ();
 #endif
-#line 24 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
+#line 25 "/home/boom/Documents/vala/hello-world/hello-again/src/hello-again.vala"
 	return _vala_main (argv, argc);
-#line 102 "hello-again.c"
+#line 166 "hello-again.c"
 }
 
 
