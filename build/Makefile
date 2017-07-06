@@ -167,6 +167,45 @@ com.github.marcelognunez11.hello-again/fast:
 	$(MAKE) -f CMakeFiles/com.github.marcelognunez11.hello-again.dir/build.make CMakeFiles/com.github.marcelognunez11.hello-again.dir/build
 .PHONY : com.github.marcelognunez11.hello-again/fast
 
+#=============================================================================
+# Target rules for targets named po
+
+# Build rule for target.
+po: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 po
+.PHONY : po
+
+# fast build rule for target.
+po/fast:
+	$(MAKE) -f po/CMakeFiles/po.dir/build.make po/CMakeFiles/po.dir/build
+.PHONY : po/fast
+
+#=============================================================================
+# Target rules for targets named i18n
+
+# Build rule for target.
+i18n: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 i18n
+.PHONY : i18n
+
+# fast build rule for target.
+i18n/fast:
+	$(MAKE) -f po/CMakeFiles/i18n.dir/build.make po/CMakeFiles/i18n.dir/build
+.PHONY : i18n/fast
+
+#=============================================================================
+# Target rules for targets named pot
+
+# Build rule for target.
+pot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pot
+.PHONY : pot
+
+# fast build rule for target.
+pot/fast:
+	$(MAKE) -f po/CMakeFiles/pot.dir/build.make po/CMakeFiles/pot.dir/build
+.PHONY : pot/fast
+
 src/hello-again.o: src/hello-again.c.o
 
 .PHONY : src/hello-again.o
@@ -207,6 +246,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... po"
+	@echo "... i18n"
+	@echo "... pot"
 	@echo "... src/hello-again.o"
 	@echo "... src/hello-again.i"
 	@echo "... src/hello-again.s"

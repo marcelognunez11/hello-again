@@ -165,11 +165,23 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to a program.
+INTLTOOL_EXTRACT_EXECUTABLE:FILEPATH=/usr/bin/intltool-extract
+
+//Path to a program.
+MSGFMT_EXECUTABLE:FILEPATH=/usr/bin/msgfmt
+
+//Path to a program.
+MSG_MERGE:FILEPATH=/usr/bin/msgmerge
+
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Path to a program.
 VALA_EXECUTABLE:FILEPATH=/usr/bin/valac
+
+//Path to a program.
+XGETTEXT_EXECUTABLE:FILEPATH=/usr/bin/xgettext
 
 //Value Computed by CMake
 com.github.marcelognunez11.hello-again_BINARY_DIR:STATIC=/home/boom/Documents/vala/hello-world/hello-again/build
@@ -268,7 +280,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

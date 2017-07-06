@@ -72,6 +72,12 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 file(INSTALL DESTINATION "/usr/share/metainfo" TYPE FILE FILES "/home/boom/Documents/vala/hello-world/hello-again/data/com.github.marcelognunez11.hello-again.appdata.xml")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/boom/Documents/vala/hello-world/hello-again/build/po/cmake_install.cmake")
+
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

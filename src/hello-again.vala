@@ -40,6 +40,16 @@ int main (string[] args) {
         stderr.printf (_("Could not load application icon: %s\n"), e.message);
     }
     
+    /*
+        var button_hello = new Gtk.Button.with_label ("Click me!");
+        button_hello.clicked.connect (() => {
+            button_hello.label = "Clicked!";
+            button_hello.set_sensitive (false);
+        });
+
+        window.add(button_hello);
+    */
+    
     var label = new Gtk.Label(_("Hello Again World!"));
 
     window.add(label);

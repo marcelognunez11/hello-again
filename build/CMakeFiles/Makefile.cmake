@@ -13,6 +13,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.5.1/CMakeSystem.cmake"
   "CMakeFiles/feature_tests.c"
   "CMakeFiles/feature_tests.cxx"
+  "../po/CMakeLists.txt"
   "/usr/share/cmake-3.5/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.5/Modules/CMakeCInformation.cmake"
@@ -95,6 +96,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.5/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.5/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.5/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake-3.5/Modules/Translations.cmake"
   "/usr/share/cmake-3.5/Modules/ValaPrecompile.cmake"
   "/usr/share/cmake-3.5/Modules/ValaVersion.cmake"
   )
@@ -113,9 +115,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.5.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "po/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/com.github.marcelognunez11.hello-again.dir/DependInfo.cmake"
+  "po/CMakeFiles/po.dir/DependInfo.cmake"
+  "po/CMakeFiles/i18n.dir/DependInfo.cmake"
+  "po/CMakeFiles/pot.dir/DependInfo.cmake"
   )
